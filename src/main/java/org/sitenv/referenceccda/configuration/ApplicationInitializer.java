@@ -4,9 +4,10 @@ import org.sitenv.contentvalidator.configuration.ContentValidatorApiConfiguratio
 import org.sitenv.vocabularies.configuration.CodeValidatorApiConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -22,10 +23,4 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
 	protected String[] getServletMappings() {
 		return new String[] { "/" };
 	}
-
-    @Override
-    protected void registerDispatcherServlet(ServletContext servletContext) {
-        super.registerDispatcherServlet(servletContext);
-    }
-
 }
